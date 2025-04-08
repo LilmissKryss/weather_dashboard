@@ -1,0 +1,27 @@
+{
+  "name": "weather-dashboard",
+  "version": "1.0.0",
+  "description": "Weather Dashboard Application",
+  "main": "server/dist/server.js",
+  "scripts": {
+    "start": "node server/dist/server.js",
+    "build": "cd client && npm run build && cd ../server && npx tsc --project tsconfig.json",
+    "install": "cd client && npm install && cd ../server && npm install",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\""
+  },
+  "keywords": [
+    "weather",
+    "dashboard",
+    "openweather"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
